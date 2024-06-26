@@ -12,7 +12,10 @@ body {
   width: 100%;
   height: auto;
 }
-
+section {
+  margin-top: 100px;
+  padding: 80px 0;
+}
 /* header */
 header {
   width: 100%;
@@ -80,7 +83,7 @@ li > .submenu {
   background-color: #ffffff;
   transform: translateX(-50%);
   box-shadow: 0 2px 3px rgb(0, 0, 0, 0.3);
-  opacity: 0;
+  display: none;
 }
 .submenu > li {
   width: 130px;
@@ -93,8 +96,8 @@ li > .submenu {
   height: 100%;
 }
 #gnb > ul > li:hover .submenu {
-  opacity: 1;
-  transition: opacity 0.4s;
+  display: block;
+  transition: 3s;
 }
 .submenu > li:hover a {
   box-shadow: inset 0 0 2px rgb(0, 0, 0, 0.2);
@@ -151,7 +154,6 @@ div.search {
 
 /* 컨텐츠 영역 */
 .main_text {
-  padding-top: 200px;
   width: 100%;
   height: auto;
   text-align: center;
@@ -345,7 +347,6 @@ button {
   height: fit-content;
 }
 .big_box {
-  padding-top: 100px;
   width: 1400px;
   height: auto;
   display: flex;
@@ -453,4 +454,172 @@ button {
   opacity: 0;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
+}
+
+/* 세번째 섹션 블랙 */
+.black_back {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+}
+.black_back h3 {
+  font-size: 55px;
+  line-height: 70px;
+}
+.black_back h3::after {
+  display: block;
+  content: "line";
+  font-size: 0;
+  width: 200px;
+  height: 3px;
+  background-color: #c22e2e;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/* 네번째 섹션 리스트 */
+.list_wrap {
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+.list_box {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+}
+.list_box h3 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#site_map {
+  width: 100%;
+  height: 120px;
+  display: block;
+}
+#site_map ul {
+  width: 25%;
+  height: fit-content;
+  font-size: 16px;
+  float: left;
+  list-style: disc inside;
+}
+#site_map li,
+#site_map a {
+  color: #4d4d4d;
+  line-height: 24px;
+}
+
+#site_map a:hover {
+  color: #c22e2e;
+}
+
+/* 네번째 섹션 블랙 */
+
+.black_back > p {
+  padding-top: 50px;
+  font-size: 16px;
+  width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.black_back h4 {
+  padding-top: 30px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+}
+/* 버튼 */
+button {
+  border: none;
+  background: none;
+}
+label[for="white_btn"] {
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 100px;
+  color: #000000;
+}
+#white_btn {
+  margin-top: 30px;
+  padding: 20px 30px;
+  border-radius: 40px;
+  background: #ffffff;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+#white_btn::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  bottom: -20px;
+  right: -20px;
+  background: inherit;
+  border-radius: 50px;
+  z-index: -1;
+  opacity: 0.4;
+  -webkit-transform: scale3d(0.8, 0.5, 1);
+  transform: scale3d(0.8, 0.5, 1);
+}
+#white_btn:hover {
+  -webkit-transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+  transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+  color: #eceff1;
+  background-color: #c22e2e;
+  -webkit-animation: anim-moema-1 0.3s forwards;
+  animation: anim-moema-1 0.3s forwards;
+}
+#white_btn:hover::before {
+  -webkit-animation: anim-moema-2 0.3s 0.3s forwards;
+  animation: anim-moema-2 0.3s 0.3s forwards;
+}
+@-webkit-keyframes anim-moema-1 {
+  60% {
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes anim-moema-1 {
+  60% {
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes anim-moema-2 {
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+*/ @keyframes anim-moema-2 {
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+/* 푸터 */
+footer {
+  line-height: 50px;
+  text-align: center;
 }
